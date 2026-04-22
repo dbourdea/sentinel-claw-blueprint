@@ -11,7 +11,9 @@ The agent operates on a **Observe -> Orient -> Decide -> Act (OODA)** loop, inte
 
 ## 2. Reasoning Engine (Orient & Decide)
 - **Framework**: OpenClaw.
-- **Model**: High-reasoning LLM (e.g., Gemini 1.5 Pro).
+- **Tiered Intelligence**:
+    - **Tier 1 (Sentry)**: Local **Lemonade Server** (e.g., Llama 3) handles routine log parsing and anomaly detection to ensure data privacy and zero cost.
+    - **Tier 2 (Architect)**: **OpenRouter (Claude 3.5 Sonnet)** handles deep reasoning, incident investigation, and high-stakes decision making.
 - **Context Window**: Maintained with recent logs, current firewall state, and known internal IP identities.
 
 ## 3. Execution (Act)
